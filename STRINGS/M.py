@@ -10,3 +10,4 @@ def add_dot_between(strn):
     
 print('*' + add_dot_between(text).rpartition('.')[0] + '*')
 
+
