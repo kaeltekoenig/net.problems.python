@@ -10,18 +10,23 @@
 # В восьмой строке выведите все символы строки через один в обратном порядке, начиная с последнего.
 # В девятой строке выведите длину данной строки.
 
-text = 'Абракадабра'
+# def isPalindrome(s):
+#     return str(s) == str(s)[::-1]
 
-print(text[2])
-print(text[-2])
-print(text[:5])
-print(text[:-2])
-print(text[::2])
-print(text[1::2])
-print(text[::-1])
-print(text[::-2])
-print(len(text))
-# р
+
+# print(isPalindrome('абц'))
+print(bool(map(lambda s: str(s) == str(s)[::-1], 'saa'.split())))
+
+# print(text[2])
+# print(text[-2])
+# print(text[:5])
+# print(text[:-2])
+# print(text[::2])
+# print(text[1::2])
+# print(text[::-1])
+# print(text[::-2])
+# print(len(text))
+# # р
 # р
 # Абрак
 # Абракадаб
@@ -30,3 +35,4 @@ print(len(text))
 # арбадакарбА
 # абдкрА
 # 11
+

@@ -1,14 +1,11 @@
-n = 5
-m = 6
-
-array = [
-    [z + x * m for z in range(m) if x % 2 == 0] + [z + x * m for z in range(m-1, -1, -1) if x % 2 != 0]
-    for x in range(n)]
+def unfold_list(lst):
+    for rw in lst:
+       print( ' '.join(map(lambda el: str(el).rjust(4), rw)))
 
 
-for row in array:
-    for col in row:
-        print(str(col).rjust(2), end=' ')
-    print()
+
+n, m = 5, 6
+array = [[(r * m + c) * (r % 2 == 0) + (r * m + (m - c - 1)) * (r % 2 == 1) for c in range(m)] for r in range(n)]
 
 
+unfold_list(array)

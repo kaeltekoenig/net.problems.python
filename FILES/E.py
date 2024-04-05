@@ -1,0 +1,6 @@
+f = open('input.txt')
+o = open('output.txt', 'w')
+s = f.read()
+o.write(''.join(s[::-1]))
+f.close()
+o.close()

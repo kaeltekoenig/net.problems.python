@@ -1,10 +1,15 @@
-n = 5
-m = 6
+def unfold_list(lst):
+    for rw in lst:
+        print(''.join(map(lambda el: str(el).rjust(4), rw)))
 
-array = [[int(x != z) + int(x > z) for z in range(m)] for x in range(n)]
+
+def max_number(a, b):
+    return a * (a > b) + b * (a <= b)
 
 
-for row in array:
-    for col in row:
-        print(col, end=' ')
-    print()
+
+n, m = 7, 7
+array = [[1 if c == r or c == n - r - 1 else 0 for c in range(m)] for r in range(n)]
+
+
+unfold_list(array)

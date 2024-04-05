@@ -1,13 +1,10 @@
-n = 5
-m = 5
+def unfold_list(lst):
+    for rw in lst:
+        print(''.join(map(lambda el: str(el).rjust(4), rw)))
 
-array = [[abs(z-x) for z in range(m-1, -1, -1)] for x in range(n)]
+
+n, m = 10, 10
+array = [[1 if (c + r) % 4 == 1 else 0 for c in range(m)] for r in range(n)]
 
 
-def unfold_mult_list(lst):
-    for row in lst:
-        for col in row:
-            print(col, end=' ')
-        print()
-
-unfold_mult_list(array)
+unfold_list(array)

@@ -1,0 +1,1 @@
+print(*sorted(map(int, list(set(input().split()) & set(input().split())))))

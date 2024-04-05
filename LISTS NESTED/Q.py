@@ -1,10 +1,17 @@
-n = 7
-m = 7
+def unfold_list(lst):
+    for rw in lst:
+        print(''.join(map(lambda el: str(el).rjust(4), rw)))
 
-array = [[int(x == z or x+1 + z == n) for z in range(m)] for x in range(n)]
+
+n, m = 8, 8
+array = [
+    [1 if c > r and c < (n - r - 1) 
+     else 2 if c > r and c > (n - r - 1) 
+     else 3 if r > c and c > (n - r - 1) 
+     else 4 if r > c 
+     else 0
+     for c in range(m)] 
+     for r in range(n)]
 
 
-for row in array:
-    for col in row:
-        print(col, end=' ')
-    print()
+unfold_list(array)
